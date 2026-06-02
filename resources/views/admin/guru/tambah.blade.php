@@ -78,14 +78,8 @@
                 <label class="neo-label" for="nip">
                     NIP <span class="form-opsional">(opsional)</span>
                 </label>
-                <input
-                    type="text"
-                    id="nip"
-                    name="nip"
-                    class="neo-input"
-                    placeholder="Nomor Induk Pegawai"
-                    value="{{ old('nip', $nipBaru) }}"
-                >
+                <input type="text" id="nip" name="nip" class="neo-input" placeholder="Nomor Induk Pegawai"
+                    value="{{ old('nip', $nipBaru) }}">
             </div>
 
             {{-- Nama --}}
@@ -93,15 +87,8 @@
                 <label class="neo-label" for="nama">
                     Nama Lengkap <span class="form-required">*</span>
                 </label>
-                <input
-                    type="text"
-                    id="nama"
-                    name="nama"
-                    class="neo-input"
-                    placeholder="Nama lengkap guru"
-                    value="{{ old('nama') }}"
-                    required
-                >
+                <input type="text" id="nama" name="nama" class="neo-input" placeholder="Nama lengkap guru"
+                    value="{{ old('nama') }}" required>
             </div>
 
             {{-- Jenis Kelamin --}}
@@ -121,13 +108,8 @@
                 <label class="neo-label" for="tanggal_lahir">
                     Tanggal Lahir <span class="form-opsional">(opsional)</span>
                 </label>
-                <input
-                    type="date"
-                    id="tanggal_lahir"
-                    name="tanggal_lahir"
-                    class="neo-input"
-                    value="{{ old('tanggal_lahir') }}"
-                >
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="neo-input"
+                    value="{{ old('tanggal_lahir') }}">
             </div>
 
             {{-- No Telepon --}}
@@ -135,14 +117,8 @@
                 <label class="neo-label" for="no_telepon">
                     No. Telepon <span class="form-opsional">(opsional)</span>
                 </label>
-                <input
-                    type="text"
-                    id="no_telepon"
-                    name="no_telepon"
-                    class="neo-input"
-                    placeholder="08xxxxxxxxxx"
-                    value="{{ old('no_telepon') }}"
-                >
+                <input type="text" id="no_telepon" name="no_telepon" class="neo-input" placeholder="08xxxxxxxxxx"
+                    value="{{ old('no_telepon') }}">
             </div>
 
             {{-- Foto --}}
@@ -150,13 +126,8 @@
                 <label class="neo-label" for="foto">
                     Foto <span class="form-opsional">(opsional)</span>
                 </label>
-                <input
-                    type="file"
-                    id="foto"
-                    name="foto"
-                    class="neo-input-file"
-                    accept="image/jpg,image/jpeg,image/png"
-                >
+                <input type="file" id="foto" name="foto" class="neo-input-file"
+                    accept="image/jpg,image/jpeg,image/png">
                 <span class="form-hint">Format: JPG, JPEG, PNG. Maks: 2MB</span>
             </div>
 
@@ -165,13 +136,7 @@
                 <label class="neo-label" for="alamat">
                     Alamat <span class="form-opsional">(opsional)</span>
                 </label>
-                <textarea
-                    id="alamat"
-                    name="alamat"
-                    class="neo-textarea"
-                    placeholder="Alamat lengkap guru"
-                    rows="3"
-                >{{ old('alamat') }}</textarea>
+                <textarea id="alamat" name="alamat" class="neo-textarea" placeholder="Alamat lengkap guru" rows="3">{{ old('alamat') }}</textarea>
             </div>
 
             {{-- Divider akun login --}}
@@ -188,15 +153,8 @@
                 <label class="neo-label" for="username">
                     Username <span class="form-opsional">(otomatis = NIP)</span>
                 </label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    class="neo-input"
-                    value="{{ old('username', $nipBaru) }}"
-                    readonly
-                    style="background:#f5f5f0; cursor:not-allowed;"
-                >
+                <input type="text" id="username" name="username" class="neo-input"
+                    value="{{ old('username', $nipBaru) }}" readonly style="background:#f5f5f0; cursor:not-allowed;">
             </div>
 
             {{-- Password --}}
@@ -204,15 +162,8 @@
                 <label class="neo-label" for="password">
                     Password <span class="form-opsional">(otomatis = NIP)</span>
                 </label>
-                <input
-                    type="text"
-                    id="password"
-                    name="password"
-                    class="neo-input"
-                    value="{{ old('password', $nipBaru) }}"
-                    readonly
-                    style="background:#f5f5f0; cursor:not-allowed;"
-                >
+                <input type="text" id="password" name="password" class="neo-input"
+                    value="{{ old('password', $nipBaru) }}" readonly style="background:#f5f5f0; cursor:not-allowed;">
                 <span class="form-hint">Password default sama dengan NIP. Guru bisa ganti sendiri di profil.</span>
             </div>
 

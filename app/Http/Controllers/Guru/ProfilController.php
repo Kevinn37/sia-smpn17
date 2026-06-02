@@ -70,6 +70,9 @@ class ProfilController extends Controller
             ]);
         }
 
+        // Update session nama jika berubah
+        session(['foto_guru' => $namaFoto]);
+
         return redirect()->route('guru.profil')
             ->with('sukses', 'Profil berhasil diperbarui.');
     }

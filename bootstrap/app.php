@@ -25,10 +25,4 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })
-    ->booting(function ($app) {
-        // Mengalihkan folder storage ke /tmp khusus saat berjalan di Vercel (Production)
-        if (isset($_SERVER['VERCEL_JWT']) || env('APP_ENV') === 'production') {
-            $app->useStoragePath('/tmp/storage');
-        }
-    })
     ->create();

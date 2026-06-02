@@ -5,12 +5,9 @@
 // SIAKAD SMP Negeri 17 Makassar
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
-
 // Controllers
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WelcomeController;
-
 // Admin
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 use App\Http\Controllers\Admin\SiswaController;
@@ -21,21 +18,18 @@ use App\Http\Controllers\Admin\JadwalController as AdminJadwal;
 use App\Http\Controllers\Admin\KalenderController;
 use App\Http\Controllers\Admin\PengumumanController;
 use App\Http\Controllers\Admin\LaporanController as AdminLaporan;
-
 // Guru
 use App\Http\Controllers\Guru\DashboardController as GuruDashboard;
 use App\Http\Controllers\Guru\PresensiController as GuruPresensi;
 use App\Http\Controllers\Guru\NilaiController as GuruNilai;
 use App\Http\Controllers\Guru\JadwalController as GuruJadwal;
 use App\Http\Controllers\Guru\ProfilController as GuruProfil;
-
 // Siswa
 use App\Http\Controllers\Siswa\DashboardController as SiswaDashboard;
 use App\Http\Controllers\Siswa\PresensiController as SiswaPresensi;
 use App\Http\Controllers\Siswa\NilaiController as SiswaNilai;
 use App\Http\Controllers\Siswa\JadwalController as SiswaJadwal;
 use App\Http\Controllers\Siswa\ProfilController as SiswaProfil;
-
 // Kepala Sekolah
 use App\Http\Controllers\KepalaSekolah\DashboardController as KepsekDashboard;
 use App\Http\Controllers\KepalaSekolah\MonitoringController;
@@ -203,16 +197,4 @@ Route::prefix('kepala-sekolah')->name('kepala-sekolah.')->middleware('role:kepal
         Route::get('/export', [KepsekLaporan::class, 'export'])->name('export');
     });
 
-});
-
-// ===========================
-// ROUTE KHUSUS DEPLOYMENT VERCEL
-// ===========================
-Route::get('/jalankan-migrasi', function () {
-    try {
-        Artisan::call('migrate --force');
-        return 'Migrasi database berhasil!';
-    } catch (\Exception $e) {
-        return 'Gagal migrasi: ' . $e->getMessage();
-    }
 });
