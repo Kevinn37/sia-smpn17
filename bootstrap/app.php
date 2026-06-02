@@ -8,7 +8,16 @@ use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
-return Application::configure(basePath: dirname(__DIR__))
+// Pastikan folder cache dialihkan ke folder /tmp jika berjalan di server Vercel
+$basePath = dirname(__DIR__);
+$app = Application::configure(basePath: $basePath);
+
+if (isset($_SERVER['VERCEL_JWT']) || env('APP_ENV') === 'production') {
+    $app->useStoragePath('/tmp/storage');
+    $app->useBootstrapCachePath('/tmp/bootstrap/cache');
+}
+
+return $app
     ->withRouting(
         web: __DIR__ . '/../routes/web.php',
         commands: __DIR__ . '/../routes/console.php',
