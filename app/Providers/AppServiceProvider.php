@@ -21,5 +21,9 @@ class AppServiceProvider extends ServiceProvider
         // Set locale Carbon ke Indonesia
         // Agar translatedFormat() tampil dalam bahasa Indonesia
         Carbon::setLocale('id');
+
+        if (config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
     }
 }
