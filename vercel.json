@@ -19,5 +19,15 @@
             "src": "/(.*)",
             "dest": "public/index.php"
         }
-    ]
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "CACHE_STORE": "file",
+        "QUEUE_CONNECTION": "sync",
+        "SESSION_DRIVER": "file",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "SERVICES_MANIFEST": "/tmp/services.php",
+        "PACKAGES_MANIFEST": "/tmp/packages.php"
+    }
 }
