@@ -1,15 +1,16 @@
 /* FILE: resources/css/app.css */
 /* Base CSS global — Full Neo Brutalism */
 /* SIAKAD SMP Negeri 17 Makassar */
+/* ===========================
+   IMPORT FONT GOOGLE
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ===========================
-   IMPORT FONT GOOGLE
-=========================== */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap");
+
 
 /* ===========================
    BASE GLOBAL
