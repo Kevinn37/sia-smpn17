@@ -68,19 +68,7 @@
     {{-- Area Scan QR --}}
     <div class="scan-wrapper" data-aos="fade-up">
 
-        {{-- Tab pilihan --}}
-        <div class="scan-tab-wrapper">
-            <button class="scan-tab aktif" id="tab-kamera" onclick="gantiTab('kamera')">
-                <i data-lucide="camera"></i>
-                Scan Kamera
-            </button>
-            <button class="scan-tab" id="tab-manual" onclick="gantiTab('manual')">
-                <i data-lucide="keyboard"></i>
-                Input Manual
-            </button>
-        </div>
-
-        {{-- Panel Scan Kamera --}}
+        {{-- Panel Scan Kamera (tanpa tab) --}}
         <div class="scan-panel" id="panel-kamera">
             <div class="scan-kamera-info">
                 <i data-lucide="info"></i>
@@ -101,24 +89,6 @@
                 <i data-lucide="x"></i>
                 Stop Scan
             </button>
-        </div>
-
-        {{-- Panel Input Manual --}}
-        <div class="scan-panel" id="panel-manual" style="display:none;">
-            <div class="scan-manual-info">
-                <i data-lucide="info"></i>
-                <span>Masukkan token QR yang diberikan guru jika kamera tidak tersedia</span>
-            </div>
-            <form action="{{ route('siswa.presensi.scan') }}" method="GET" class="scan-manual-form">
-                <div class="scan-manual-input-wrapper">
-                    <input type="text" name="token" class="neo-input scan-manual-input"
-                        placeholder="Masukkan token QR..." required autofocus>
-                    <button type="submit" class="neo-btn neo-btn-biru">
-                        <i data-lucide="send"></i>
-                        Kirim
-                    </button>
-                </div>
-            </form>
         </div>
 
     </div>

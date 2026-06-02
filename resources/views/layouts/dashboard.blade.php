@@ -1,3 +1,7 @@
+{{-- FILE: resources/views/layouts/dashboard.blade.php --}}
+{{-- Layout dashboard dengan sidebar — semua role pakai ini --}}
+{{-- SIAKAD SMP Negeri 17 Makassar --}}
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -14,9 +18,7 @@
     {{-- Google Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     {{-- AOS CSS --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -54,7 +56,29 @@
             {{-- Info pengguna --}}
             <div class="sidebar-user">
                 <div class="sidebar-user-avatar">
-                    {{ strtoupper(substr(session('nama'), 0, 1)) }}
+                    @php
+                        $fotoSidebar = null;
+                        $role        = session('role');
+                        $id_user     = session('id_user');
+
+                        if ($role === 'guru') {
+                            $dataGuru    = DB::table('guru')->where('id_user', $id_user)->first();
+                            $fotoSidebar = $dataGuru?->foto ? asset('img/guru/' . $dataGuru->foto) : null;
+                        } elseif ($role === 'siswa') {
+                            $dataSiswa   = DB::table('siswa')->where('id_user', $id_user)->first();
+                            $fotoSidebar = $dataSiswa?->foto ? asset('img/siswa/' . $dataSiswa->foto) : null;
+                        }
+                    @endphp
+
+                    @if ($fotoSidebar)
+                        <img
+                            src="{{ $fotoSidebar }}"
+                            alt="{{ session('nama') }}"
+                            style="width:100%; height:100%; object-fit:cover;"
+                        >
+                    @else
+                        {{ strtoupper(substr(session('nama'), 0, 1)) }}
+                    @endif
                 </div>
                 <div class="sidebar-user-info">
                     <span class="sidebar-user-nama">{{ session('nama') }}</span>
@@ -116,21 +140,21 @@
 
         // Inisialisasi AOS
         AOS.init({
-            duration: 500,
-            once: true,
-            offset: 60,
+            duration : 500,
+            once     : true,
+            offset   : 60,
         });
 
         // Konfirmasi logout
         function konfirmasiLogout() {
             Swal.fire({
-                title: 'Keluar dari sistem?',
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonText: 'Ya, keluar',
-                cancelButtonText: 'Batal',
+                title             : 'Keluar dari sistem?',
+                icon              : 'question',
+                showCancelButton  : true,
+                confirmButtonText : 'Ya, keluar',
+                cancelButtonText  : 'Batal',
                 confirmButtonColor: '#2c46c4',
-                cancelButtonColor: '#111111',
+                cancelButtonColor : '#111111',
             }).then((result) => {
                 if (result.isConfirmed) {
                     document.getElementById('form-logout').submit();
@@ -141,14 +165,14 @@
         // Konfirmasi hapus data — dipakai semua halaman
         function konfirmasiHapus(formId) {
             Swal.fire({
-                title: 'Hapus data ini?',
-                text: 'Data yang dihapus tidak dapat dikembalikan.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Ya, hapus',
-                cancelButtonText: 'Batal',
+                title             : 'Hapus data ini?',
+                text              : 'Data yang dihapus tidak dapat dikembalikan.',
+                icon              : 'warning',
+                showCancelButton  : true,
+                confirmButtonText : 'Ya, hapus',
+                cancelButtonText  : 'Batal',
                 confirmButtonColor: '#d234b0',
-                cancelButtonColor: '#111111',
+                cancelButtonColor : '#111111',
             }).then((result) => {
                 if (result.isConfirmed) {
                     document.getElementById(formId).submit();
