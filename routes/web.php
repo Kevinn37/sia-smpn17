@@ -5,6 +5,7 @@
 // SIAKAD SMP Negeri 17 Makassar
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 // Controllers
 use App\Http\Controllers\AuthController;
@@ -202,4 +203,16 @@ Route::prefix('kepala-sekolah')->name('kepala-sekolah.')->middleware('role:kepal
         Route::get('/export', [KepsekLaporan::class, 'export'])->name('export');
     });
 
+});
+
+// ===========================
+// ROUTE KHUSUS DEPLOYMENT VERCEL
+// ===========================
+Route::get('/jalankan-migrasi', function () {
+    try {
+        Artisan::call('migrate --force');
+        return 'Migrasi database berhasil!';
+    } catch (\Exception $e) {
+        return 'Gagal migrasi: ' . $e->getMessage();
+    }
 });
