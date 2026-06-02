@@ -14,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "http://127.0.0.1:8000/",
+        "APP_URL": "https://sia-smpn17.vercel.app",
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -28,7 +28,8 @@
         "DB_CONNECTION": "mysql",
         "DB_HOST": "127.0.0.1",
         "DB_PORT": "3306",
-        "DB_DATABASE": "sia_smpn17",
-        "DB_USERNAME": "sia_smpn17"
+        "DB_DATABASE": "sia-smpn17",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": ""
     }
 }
