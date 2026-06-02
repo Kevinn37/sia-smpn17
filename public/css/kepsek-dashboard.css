@@ -1,0 +1,295 @@
+/* FILE: public/css/kepsek-dashboard.css */
+/* Styling dashboard kepala sekolah */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   SAMBUTAN
+=========================== */
+.kepsek-sambutan {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    background      : #111111;
+    border          : 3px solid #111111;
+    box-shadow      : 6px 6px 0px #2c46c4;
+    padding         : 1.5rem;
+    margin-bottom   : 1.25rem;
+    flex-wrap       : wrap;
+    gap             : 1rem;
+}
+
+.kepsek-sambutan h2 {
+    font-family   : 'Archivo', sans-serif;
+    font-size     : 1.4rem;
+    font-weight   : 900;
+    color         : #ffe845;
+    margin-bottom : 0.25rem;
+}
+
+.kepsek-sambutan p {
+    font-family : 'Inter', sans-serif;
+    font-weight : 500;
+    font-size   : 0.875rem;
+    color       : #aaaaaa;
+}
+
+.kepsek-sambutan-badge {
+    display      : inline-flex;
+    align-items  : center;
+    gap          : 0.5rem;
+    background   : #2c46c4;
+    border       : 3px solid #ffe845;
+    box-shadow   : 3px 3px 0px #ffe845;
+    padding      : 0.5rem 1rem;
+    font-family  : 'Archivo', sans-serif;
+    font-weight  : 800;
+    font-size    : 0.85rem;
+    color        : #ffe845;
+}
+
+.kepsek-sambutan-badge i {
+    width  : 16px;
+    height : 16px;
+}
+
+/* ===========================
+   GRID 2 KOLOM
+=========================== */
+.kepsek-grid-2 {
+    display               : grid;
+    grid-template-columns : 1fr 1fr;
+    gap                   : 1.25rem;
+    margin-bottom         : 1.25rem;
+}
+
+/* ===========================
+   REKAP PRESENSI
+=========================== */
+.kepsek-rekap-grid {
+    display               : grid;
+    grid-template-columns : repeat(4, 1fr);
+    gap                   : 0.75rem;
+}
+
+.kepsek-rekap-item {
+    border         : 3px solid #111111;
+    padding        : 1rem 0.5rem;
+    text-align     : center;
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.25rem;
+}
+
+.kepsek-rekap-angka {
+    font-family : 'Archivo', sans-serif;
+    font-size   : 1.75rem;
+    font-weight : 900;
+    line-height : 1;
+    display     : block;
+}
+
+.kepsek-rekap-label {
+    font-family : 'Inter', sans-serif;
+    font-weight : 700;
+    font-size   : 0.72rem;
+    display     : block;
+}
+
+.kepsek-rekap-hadir { background: #03d930; color: #111111; box-shadow: 3px 3px 0px #111111; }
+.kepsek-rekap-izin  { background: #ffe845; color: #111111; box-shadow: 3px 3px 0px #111111; }
+.kepsek-rekap-sakit { background: #2c46c4; color: #ffffff; box-shadow: 3px 3px 0px #111111; }
+.kepsek-rekap-alfa  { background: #d234b0; color: #ffffff; box-shadow: 3px 3px 0px #111111; }
+
+/* ===========================
+   KEGIATAN LIST
+=========================== */
+.kepsek-kegiatan-list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.75rem;
+}
+
+.kepsek-kegiatan-item {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+    padding     : 0.65rem;
+    border      : 2px solid #111111;
+    background  : #ffffff;
+    transition  : background 0.1s;
+}
+
+.kepsek-kegiatan-item:hover {
+    background : #fffde7;
+}
+
+.kepsek-kegiatan-tgl {
+    width           : 44px;
+    height          : 44px;
+    background      : #ffe845;
+    border          : 2px solid #111111;
+    box-shadow      : 2px 2px 0px #111111;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    flex-shrink     : 0;
+    line-height     : 1;
+}
+
+.kepsek-kegiatan-tgl span:first-child {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 900;
+    font-size   : 1rem;
+    color       : #111111;
+}
+
+.kepsek-kegiatan-tgl span:last-child {
+    font-family    : 'Inter', sans-serif;
+    font-size      : 0.62rem;
+    color          : #111111;
+    text-transform : uppercase;
+    font-weight    : 600;
+}
+
+.kepsek-kegiatan-info {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.3rem;
+}
+
+.kepsek-kegiatan-judul {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 700;
+    font-size   : 0.875rem;
+    color       : #111111;
+}
+
+/* ===========================
+   BAR CHART
+=========================== */
+.kepsek-bar-list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.65rem;
+}
+
+.kepsek-bar-item {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+}
+
+.kepsek-bar-label {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 700;
+    font-size   : 0.825rem;
+    color       : #111111;
+    min-width   : 36px;
+}
+
+.kepsek-bar-track {
+    flex       : 1;
+    height     : 24px;
+    background : #f0f0f0;
+    border     : 2px solid #111111;
+    overflow   : hidden;
+}
+
+.kepsek-bar-fill {
+    height     : 100%;
+    transition : width 0.6s ease;
+}
+
+.kepsek-bar-biru   { background: #2c46c4; }
+.kepsek-bar-hijau  { background: #03d930; }
+.kepsek-bar-kuning { background: #ffe845; }
+.kepsek-bar-merah  { background: #d234b0; }
+
+.kepsek-bar-angka {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 800;
+    font-size   : 0.825rem;
+    color       : #111111;
+    min-width   : 36px;
+    text-align  : right;
+}
+
+/* ===========================
+   NEO CARD HEADER
+=========================== */
+.neo-card-header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    margin-bottom   : 1.25rem;
+    padding-bottom  : 0.75rem;
+    border-bottom   : 3px solid #111111;
+}
+
+.neo-card-header h3 {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+    font-family : 'Archivo', sans-serif;
+    font-size   : 1rem;
+    font-weight : 800;
+    color       : #111111;
+}
+
+.neo-card-header h3 i {
+    width  : 18px;
+    height : 18px;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.neo-empty {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    padding         : 2rem;
+    gap             : 0.5rem;
+    color           : #999999;
+}
+
+.neo-empty i {
+    width   : 36px;
+    height  : 36px;
+    opacity : 0.3;
+}
+
+.neo-empty p {
+    font-family : 'Inter', sans-serif;
+    font-size   : 0.875rem;
+    color       : #999999;
+}
+
+/* Kalender badge */
+.kalender-badge-libur_nasional { background: #d234b0; color: #fff; border: 2px solid #111; }
+.kalender-badge-libur_sekolah  { background: #2c46c4; color: #fff; border: 2px solid #111; }
+.kalender-badge-ujian          { background: #ffe845; color: #111; border: 2px solid #111; }
+.kalender-badge-kegiatan       { background: #03d930; color: #111; border: 2px solid #111; }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .kepsek-grid-2 {
+        grid-template-columns : 1fr;
+    }
+
+    .kepsek-rekap-grid {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .kepsek-sambutan {
+        flex-direction : column;
+        align-items    : flex-start;
+    }
+}

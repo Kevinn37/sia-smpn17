@@ -1,0 +1,233 @@
+/* FILE: public/css/laporan.css */
+/* Styling khusus halaman laporan */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   HEADER AKSI
+=========================== */
+.laporan-header-aksi {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ===========================
+   MENU LAPORAN
+=========================== */
+.laporan-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.laporan-menu-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+}
+
+.laporan-menu-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.laporan-menu-icon {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.laporan-menu-icon i {
+    width: 28px;
+    height: 28px;
+}
+
+.laporan-icon-biru {
+    background: #2c46c4;
+    color: #ffffff;
+}
+.laporan-icon-fuchsia {
+    background: #d234b0;
+    color: #ffffff;
+}
+.laporan-icon-hijau {
+    background: #03d930;
+    color: #111111;
+}
+.laporan-icon-kuning {
+    background: #ffe845;
+    color: #111111;
+}
+
+.laporan-menu-info {
+    flex: 1;
+}
+
+.laporan-menu-info h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 0.3rem;
+}
+
+.laporan-menu-info p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.825rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.laporan-menu-aksi {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   REKAP GRID
+=========================== */
+.laporan-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.laporan-rekap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.laporan-rekap-item {
+    border: 3px solid #111111;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.laporan-rekap-angka {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+}
+
+.laporan-rekap-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    display: block;
+}
+
+.laporan-rekap-hadir {
+    background: #03d930;
+    box-shadow: 3px 3px 0px #111111;
+    color: #111111;
+}
+.laporan-rekap-izin {
+    background: #ffe845;
+    box-shadow: 3px 3px 0px #111111;
+    color: #111111;
+}
+.laporan-rekap-sakit {
+    background: #2c46c4;
+    box-shadow: 3px 3px 0px #111111;
+    color: #ffffff;
+}
+.laporan-rekap-alfa {
+    background: #d234b0;
+    box-shadow: 3px 3px 0px #111111;
+    color: #ffffff;
+}
+
+/* ===========================
+   BAR CHART SEDERHANA
+=========================== */
+.laporan-bar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.laporan-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.laporan-bar-label {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.825rem;
+    color: #111111;
+    min-width: 36px;
+}
+
+.laporan-bar-track {
+    flex: 1;
+    height: 22px;
+    background: #f0f0f0;
+    border: 2px solid #111111;
+    overflow: hidden;
+}
+
+.laporan-bar-fill {
+    height: 100%;
+    background: #2c46c4;
+    transition: width 0.6s ease;
+}
+
+.laporan-bar-angka {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.825rem;
+    color: #111111;
+    min-width: 32px;
+    text-align: right;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .laporan-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .laporan-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .laporan-menu-card {
+        flex-wrap: wrap;
+    }
+
+    .laporan-rekap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .laporan-menu-aksi {
+        flex-direction: row;
+        width: 100%;
+    }
+}

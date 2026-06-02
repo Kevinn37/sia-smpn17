@@ -1,0 +1,109 @@
+/* FILE: public/css/kepsek-monitoring.css */
+/* Styling halaman monitoring kepala sekolah */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #111111;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #2c46c4;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-header-teks h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffe845;
+}
+
+.page-header-teks p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #aaaaaa;
+    margin-top: 0.25rem;
+}
+
+/* ===========================
+   REKAP ROW
+=========================== */
+.kepsek-rekap-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.kepsek-rekap-card {
+    border: 3px solid #111111;
+    box-shadow: 5px 5px 0px #111111;
+    padding: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+}
+
+.kepsek-rekap-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #111111;
+}
+
+.kepsek-rekap-angka {
+    font-family: "Archivo", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+}
+
+.kepsek-rekap-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.kepsek-rekap-hadir {
+    background: #03d930;
+    color: #111111;
+}
+.kepsek-rekap-izin {
+    background: #ffe845;
+    color: #111111;
+}
+.kepsek-rekap-sakit {
+    background: #2c46c4;
+    color: #ffffff;
+}
+.kepsek-rekap-alfa {
+    background: #d234b0;
+    color: #ffffff;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .kepsek-rekap-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

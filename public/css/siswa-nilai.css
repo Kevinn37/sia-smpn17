@@ -1,0 +1,181 @@
+/* FILE: public/css/siswa-nilai.css */
+/* Styling halaman nilai siswa */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #111111;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #ffe845;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-header-teks h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffe845;
+}
+
+.page-header-teks p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #aaaaaa;
+    margin-top: 0.25rem;
+}
+
+/* ===========================
+   FILTER CARD
+=========================== */
+.filter-card {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    background: #f5f5f0;
+    border: 3px solid #111111;
+    box-shadow: 4px 4px 0px #111111;
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 180px;
+    flex: 1;
+}
+
+.filter-aksi {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ===========================
+   RATA-RATA BOX
+=========================== */
+.siswa-nilai-rata {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #2c46c4;
+    border: 3px solid #111111;
+    box-shadow: 5px 5px 0px #111111;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.siswa-nilai-rata i {
+    width: 22px;
+    height: 22px;
+    color: #ffe845;
+    flex-shrink: 0;
+}
+
+.siswa-nilai-rata span {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.siswa-nilai-rata strong {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #ffe845;
+}
+
+/* ===========================
+   NEO CARD HEADER
+=========================== */
+.neo-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #111111;
+}
+
+.neo-card-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Archivo", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #111111;
+}
+
+.neo-card-header h3 i {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===========================
+   TABEL
+=========================== */
+.tabel-wrapper {
+    overflow-x: auto;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.neo-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 2rem;
+    gap: 0.75rem;
+    border: 3px dashed #cccccc;
+    background: #fafafa;
+}
+
+.neo-empty i {
+    width: 48px;
+    height: 48px;
+    opacity: 0.3;
+}
+
+.neo-empty p {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .filter-field {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .siswa-nilai-rata {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

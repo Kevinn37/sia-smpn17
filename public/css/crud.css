@@ -1,0 +1,346 @@
+/* FILE: public/css/crud.css */
+/* Base CRUD — komponen dasar dipakai semua halaman */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    margin-bottom   : 1.5rem;
+    padding         : 1.25rem 1.5rem;
+    background      : #111111;
+    border          : 3px solid #111111;
+    box-shadow      : 6px 6px 0px #ffe845;
+    flex-wrap       : wrap;
+    gap             : 1rem;
+}
+
+.page-header-teks h2 {
+    font-family : 'Archivo', sans-serif;
+    font-size   : 1.6rem;
+    font-weight : 900;
+    color       : #ffe845;
+    line-height : 1;
+}
+
+.page-header-teks p {
+    font-family : 'Inter', sans-serif;
+    font-weight : 500;
+    font-size   : 0.875rem;
+    color       : #aaaaaa;
+    margin-top  : 0.3rem;
+}
+
+/* ===========================
+   FILTER CARD
+=========================== */
+.filter-card {
+    margin-bottom : 1.25rem;
+    padding       : 1.25rem;
+    background    : #f5f5f0;
+    border        : 3px solid #111111;
+    box-shadow    : 4px 4px 0px #111111;
+}
+
+.filter-form {
+    display     : flex;
+    align-items : flex-end;
+    gap         : 1rem;
+    flex-wrap   : wrap;
+}
+
+.filter-field {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.3rem;
+    min-width      : 180px;
+    flex           : 1;
+}
+
+.filter-aksi {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+    padding-top : 1.6rem;
+}
+
+/* ===========================
+   TABEL
+=========================== */
+.tabel-wrapper {
+    overflow-x : auto;
+}
+
+.tabel-foto {
+    width     : 40px;
+    height    : 40px;
+    border    : 2px solid #111111;
+    overflow  : hidden;
+    flex-shrink: 0;
+}
+
+.tabel-foto img {
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;
+}
+
+.tabel-foto-inisial {
+    width            : 100%;
+    height           : 100%;
+    background       : #2c46c4;
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    font-family      : 'Archivo', sans-serif;
+    font-weight      : 900;
+    font-size        : 0.95rem;
+    color            : #ffffff;
+}
+
+.tabel-aksi {
+    display     : flex;
+    align-items : center;
+    gap         : 0.4rem;
+    flex-wrap   : wrap;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.form-card {
+    max-width : 960px;
+}
+
+.form-grid {
+    display               : grid;
+    grid-template-columns : 1fr 1fr;
+    gap                   : 1.25rem;
+}
+
+.form-field {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.4rem;
+}
+
+.form-field-full {
+    grid-column : 1 / -1;
+}
+
+.form-required {
+    color       : #d234b0;
+    font-weight : 900;
+}
+
+.form-opsional {
+    font-family : 'Inter', sans-serif;
+    font-weight : 400;
+    font-size   : 0.8rem;
+    color       : #777777;
+}
+
+.form-hint {
+    font-family : 'Inter', sans-serif;
+    font-size   : 0.78rem;
+    color       : #777777;
+    margin-top  : 0.2rem;
+}
+
+.neo-input-file {
+    width      : 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size  : 0.9rem;
+    padding    : 0.6rem 1rem;
+    border     : 3px solid #111111;
+    background : #ffffff;
+    color      : #111111;
+    cursor     : pointer;
+}
+
+.neo-input-file::-webkit-file-upload-button {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 700;
+    font-size   : 0.8rem;
+    padding     : 0.35rem 0.85rem;
+    background  : #ffe845;
+    border      : 2px solid #111111;
+    cursor      : pointer;
+    margin-right: 0.75rem;
+}
+
+.form-foto-preview {
+    display      : flex;
+    align-items  : center;
+    gap          : 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-foto-preview img {
+    width      : 64px;
+    height     : 64px;
+    object-fit : cover;
+    border     : 3px solid #111111;
+    box-shadow : 3px 3px 0px #111111;
+}
+
+.form-foto-preview span {
+    font-family : 'Inter', sans-serif;
+    font-size   : 0.8rem;
+    color       : #555555;
+    font-weight : 500;
+}
+
+.form-info-box {
+    display     : flex;
+    align-items : flex-start;
+    gap         : 0.65rem;
+    background  : #ffe845;
+    border      : 3px solid #111111;
+    box-shadow  : 3px 3px 0px #111111;
+    padding     : 0.85rem 1rem;
+}
+
+.form-info-box i {
+    width      : 18px;
+    height     : 18px;
+    flex-shrink: 0;
+    margin-top : 0.1rem;
+}
+
+.form-info-box p {
+    font-family : 'Inter', sans-serif;
+    font-weight : 600;
+    font-size   : 0.875rem;
+    color       : #111111;
+}
+
+.form-section-title {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+    font-family : 'Archivo', sans-serif;
+    font-weight : 800;
+    font-size   : 0.95rem;
+    color       : #111111;
+    margin-top  : 0.5rem;
+}
+
+.form-section-title i {
+    width  : 18px;
+    height : 18px;
+}
+
+.form-aksi {
+    display        : flex;
+    align-items    : center;
+    gap            : 0.75rem;
+    flex-direction : row;
+    padding-top    : 0.75rem;
+    border-top     : 3px solid #111111;
+}
+
+/* ===========================
+   NEO CARD HEADER
+=========================== */
+.neo-card-header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    margin-bottom   : 1.25rem;
+    padding-bottom  : 0.75rem;
+    border-bottom   : 3px solid #111111;
+}
+
+.neo-card-header h3 {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+    font-family : 'Archivo', sans-serif;
+    font-size   : 1rem;
+    font-weight : 800;
+    color       : #111111;
+}
+
+.neo-card-header h3 i {
+    width  : 18px;
+    height : 18px;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.neo-empty {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    padding         : 3rem 2rem;
+    gap             : 0.75rem;
+    border          : 3px dashed #cccccc;
+    background      : #fafafa;
+}
+
+.neo-empty i {
+    width   : 52px;
+    height  : 52px;
+    opacity : 0.3;
+}
+
+.neo-empty p {
+    font-family : 'Inter', sans-serif;
+    font-weight : 600;
+    font-size   : 0.9rem;
+    color       : #999999;
+}
+
+/* ===========================
+   BADGE TAMBAHAN
+=========================== */
+.neo-badge-biru    { background: #2c46c4; color: #ffffff; }
+.neo-badge-fuchsia { background: #d234b0; color: #ffffff; }
+.neo-badge-hijau   { background: #03d930; color: #111111; }
+.neo-badge-kuning  { background: #ffe845; color: #111111; }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+
+    .page-header {
+        flex-direction : column;
+        align-items    : flex-start;
+    }
+
+    .filter-form {
+        flex-direction : column;
+    }
+
+    .filter-field {
+        width     : 100%;
+        min-width : unset;
+    }
+
+    .filter-aksi {
+        padding-top : 0;
+        width       : 100%;
+    }
+
+    .form-grid {
+        grid-template-columns : 1fr;
+    }
+
+    .form-field-full {
+        grid-column : 1;
+    }
+
+    .tabel-aksi {
+        flex-direction : column;
+        align-items    : flex-start;
+    }
+
+}

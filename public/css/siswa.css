@@ -1,0 +1,142 @@
+/* FILE: public/css/siswa.css */
+/* Styling khusus halaman data siswa */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   STAT MINI HEADER
+=========================== */
+.siswa-stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.siswa-stat-item {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 5px 5px 0px #111111;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+}
+
+.siswa-stat-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #111111;
+}
+
+.siswa-stat-icon {
+    width: 44px;
+    height: 44px;
+    border: 3px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.siswa-stat-icon i {
+    width: 22px;
+    height: 22px;
+}
+
+.siswa-stat-icon.kuning {
+    background: #ffe845;
+}
+.siswa-stat-icon.biru {
+    background: #2c46c4;
+    color: #fff;
+}
+.siswa-stat-icon.fuchsia {
+    background: #d234b0;
+    color: #fff;
+}
+.siswa-stat-icon.hijau {
+    background: #03d930;
+}
+
+.siswa-stat-angka {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #111111;
+    line-height: 1;
+    display: block;
+}
+
+.siswa-stat-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #555555;
+    display: block;
+}
+
+/* ===========================
+   TABEL SISWA
+=========================== */
+.siswa-nama-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.siswa-avatar {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #111111;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.siswa-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.siswa-avatar-inisial {
+    width: 100%;
+    height: 100%;
+    background: #2c46c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.siswa-nama-teks {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #111111;
+}
+
+.siswa-nis-teks {
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    color: #777777;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .siswa-stat-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .siswa-stat-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,159 @@
+/* FILE: public/css/guru.css */
+/* Styling khusus halaman data guru */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   KARTU GURU
+=========================== */
+.guru-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.guru-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    overflow: hidden;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+}
+
+.guru-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.guru-card-header {
+    background: #2c46c4;
+    border-bottom: 3px solid #111111;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.guru-card-avatar {
+    width: 56px;
+    height: 56px;
+    border: 3px solid #ffe845;
+    box-shadow: 3px 3px 0px #ffe845;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.guru-card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guru-card-avatar-inisial {
+    width: 100%;
+    height: 100%;
+    background: #ffe845;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #111111;
+}
+
+.guru-card-nama {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.guru-card-nip {
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    color: #ffe845;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.guru-card-jk {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+.guru-card-body {
+    padding: 1rem 1.25rem;
+}
+
+.guru-card-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eeeeee;
+    font-family: "Inter", sans-serif;
+    font-size: 0.825rem;
+    color: #444444;
+}
+
+.guru-card-info-item:last-child {
+    border-bottom: none;
+}
+
+.guru-card-info-item i {
+    width: 16px;
+    height: 16px;
+    color: #2c46c4;
+    flex-shrink: 0;
+}
+
+.guru-card-footer {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #f5f5f0;
+    border-top: 3px solid #111111;
+}
+
+/* Switch tampilan tabel/grid */
+.tampilan-switch {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tampilan-btn {
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    border: 3px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.tampilan-btn.aktif,
+.tampilan-btn:hover {
+    background: #ffe845;
+}
+
+.tampilan-btn i {
+    width: 16px;
+    height: 16px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .guru-grid {
+        grid-template-columns: 1fr;
+    }
+}

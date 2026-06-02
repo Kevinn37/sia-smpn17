@@ -1,0 +1,364 @@
+/* FILE: public/css/dashboard.css */
+/* Styling layout dashboard + sidebar — Full Neo Brutalism */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   LAYOUT UTAMA
+=========================== */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f5f0;
+}
+
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-left: 270px;
+    transition: margin-left 0.3s ease;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100vh;
+    background: #111111;
+    border-right: 4px solid #111111;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+/* Header sidebar */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    background: #ffe845;
+    border-bottom: 4px solid #111111;
+}
+
+.sidebar-header img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.sidebar-nama {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.sidebar-nama-sistem {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #111111;
+}
+
+.sidebar-nama-sekolah {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: #111111;
+    opacity: 0.7;
+}
+
+/* Info pengguna */
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-bottom: 3px solid #2c46c4;
+}
+
+.sidebar-user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #2c46c4;
+    border: 3px solid #ffe845;
+    box-shadow: 3px 3px 0px #ffe845;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.sidebar-user-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.sidebar-user-nama {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: #ffe845;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Navigasi sidebar */
+.sidebar-nav {
+    flex: 1;
+    padding: 0.75rem 0;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.7rem 1rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #aaaaaa;
+    border-left: 4px solid transparent;
+    transition:
+        background 0.1s ease,
+        color 0.1s ease,
+        border-color 0.1s ease;
+}
+
+.sidebar-nav a:hover {
+    background: #222222;
+    color: #ffffff;
+    border-left: 4px solid #ffe845;
+}
+
+.sidebar-nav a.aktif {
+    background: #2c46c4;
+    color: #ffffff;
+    border-left: 4px solid #ffe845;
+    font-weight: 800;
+}
+
+.sidebar-nav a i {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Label grup menu */
+.sidebar-nav-label {
+    font-family: "Archivo", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 900;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 1rem 1rem 0.3rem;
+    display: block;
+}
+
+/* Footer sidebar */
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 3px solid #222222;
+}
+
+.sidebar-logout {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #aaaaaa;
+    border-color: #333333;
+    box-shadow: none;
+    font-size: 0.875rem;
+}
+
+.sidebar-logout:hover {
+    background: #d234b0;
+    color: #ffffff;
+    border-color: #d234b0;
+    box-shadow: none;
+    transform: none;
+}
+
+/* ===========================
+   HEADER DASHBOARD
+=========================== */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: #ffe845;
+    border-bottom: 4px solid #111111;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.dashboard-page-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #111111;
+}
+
+.sidebar-toggle {
+    display: none;
+    background: #111111;
+    border: 3px solid #111111;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: #ffe845;
+}
+
+/* ===========================
+   KONTEN DASHBOARD
+=========================== */
+.dashboard-konten {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+/* ===========================
+   KARTU STATISTIK
+=========================== */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
+}
+
+.stat-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.stat-card-icon {
+    width: 52px;
+    height: 52px;
+    border: 3px solid #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-card-icon.kuning {
+    background: #ffe845;
+}
+.stat-card-icon.biru {
+    background: #2c46c4;
+    color: #fff;
+}
+.stat-card-icon.fuchsia {
+    background: #d234b0;
+    color: #fff;
+}
+.stat-card-icon.hijau {
+    background: #03d930;
+}
+
+.stat-card-icon i {
+    width: 24px;
+    height: 24px;
+}
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card-angka {
+    font-family: "Archivo", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #111111;
+    line-height: 1;
+}
+
+.stat-card-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #555555;
+    margin-top: 0.2rem;
+}
+
+/* ===========================
+   RESPONSIVE MOBILE
+=========================== */
+@media (max-width: 768px) {
+    .dashboard-main {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.sidebar-aktif {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: flex;
+    }
+
+    .dashboard-konten {
+        padding: 1rem;
+    }
+
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+}

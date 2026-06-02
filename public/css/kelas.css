@@ -1,0 +1,109 @@
+/* FILE: public/css/kelas.css */
+/* Styling khusus halaman data kelas */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   KELAS SECTION PER TINGKAT
+=========================== */
+.kelas-section {
+    margin-bottom: 1.25rem;
+}
+
+.kelas-tingkat-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #111111;
+    border: 3px solid #111111;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0px #ffe845;
+}
+
+/* ===========================
+   KELAS GRID
+=========================== */
+.kelas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.kelas-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    overflow: hidden;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+    display: flex;
+    flex-direction: column;
+}
+
+.kelas-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.kelas-card-nama {
+    font-family: "Archivo", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #111111;
+    background: #ffe845;
+    border-bottom: 3px solid #111111;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.kelas-card-body {
+    padding: 0.85rem 1rem;
+    flex: 1;
+}
+
+.kelas-card-info {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #444444;
+    margin-bottom: 0.5rem;
+}
+
+.kelas-card-info i {
+    width: 16px;
+    height: 16px;
+    color: #2c46c4;
+}
+
+.kelas-card-footer {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.75rem 1rem;
+    border-top: 3px solid #111111;
+    background: #f5f5f0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .kelas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .kelas-grid {
+        grid-template-columns: 1fr;
+    }
+}

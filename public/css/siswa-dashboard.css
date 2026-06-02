@@ -1,0 +1,415 @@
+/* FILE: public/css/siswa-dashboard.css */
+/* Styling dashboard siswa */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   PROFIL CARD
+=========================== */
+.siswa-profil-card {
+    display     : flex;
+    align-items : center;
+    gap         : 1.5rem;
+    background  : #2c46c4;
+    border      : 3px solid #111111;
+    box-shadow  : 6px 6px 0px #111111;
+    padding     : 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap   : wrap;
+}
+
+.siswa-profil-foto {
+    width      : 72px;
+    height     : 72px;
+    border     : 4px solid #ffe845;
+    box-shadow : 4px 4px 0px #ffe845;
+    overflow   : hidden;
+    flex-shrink: 0;
+}
+
+.siswa-profil-foto img {
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;
+}
+
+.siswa-profil-inisial {
+    width            : 100%;
+    height           : 100%;
+    background       : #ffe845;
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
+    font-family      : 'Archivo', sans-serif;
+    font-weight      : 900;
+    font-size        : 2rem;
+    color            : #111111;
+}
+
+.siswa-profil-info h2 {
+    font-family   : 'Archivo', sans-serif;
+    font-size     : 1.4rem;
+    font-weight   : 900;
+    color         : #ffe845;
+    margin-bottom : 0.5rem;
+}
+
+.siswa-profil-meta {
+    display   : flex;
+    gap       : 1rem;
+    flex-wrap : wrap;
+}
+
+.siswa-profil-meta span {
+    display     : flex;
+    align-items : center;
+    gap         : 0.35rem;
+    font-family : 'Inter', sans-serif;
+    font-weight : 600;
+    font-size   : 0.825rem;
+    color       : rgba(255,255,255,0.85);
+}
+
+.siswa-profil-meta span i {
+    width  : 14px;
+    height : 14px;
+    color  : #ffe845;
+}
+
+/* ===========================
+   REKAP GRID
+=========================== */
+.siswa-rekap-grid {
+    display               : grid;
+    grid-template-columns : repeat(4, 1fr);
+    gap                   : 1rem;
+    margin-bottom         : 1.25rem;
+}
+
+.siswa-rekap-item {
+    border         : 3px solid #111111;
+    box-shadow     : 5px 5px 0px #111111;
+    padding        : 1.25rem;
+    text-align     : center;
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.25rem;
+    transition     : transform 0.1s, box-shadow 0.1s;
+}
+
+.siswa-rekap-item:hover {
+    transform  : translate(-2px, -2px);
+    box-shadow : 7px 7px 0px #111111;
+}
+
+.siswa-rekap-angka {
+    font-family : 'Archivo', sans-serif;
+    font-size   : 2rem;
+    font-weight : 900;
+    line-height : 1;
+    display     : block;
+}
+
+.siswa-rekap-label {
+    font-family    : 'Inter', sans-serif;
+    font-weight    : 700;
+    font-size      : 0.75rem;
+    text-transform : uppercase;
+    letter-spacing : 0.05em;
+    display        : block;
+}
+
+.siswa-rekap-hadir { background: #03d930; color: #111111; }
+.siswa-rekap-izin  { background: #ffe845; color: #111111; }
+.siswa-rekap-sakit { background: #2c46c4; color: #ffffff; }
+.siswa-rekap-alfa  { background: #d234b0; color: #ffffff; }
+
+/* ===========================
+   GRID 2 KOLOM
+=========================== */
+.siswa-grid-2 {
+    display               : grid;
+    grid-template-columns : 1fr 1fr;
+    gap                   : 1.25rem;
+    margin-bottom         : 1.25rem;
+}
+
+/* ===========================
+   JADWAL LIST
+=========================== */
+.siswa-jadwal-list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.6rem;
+}
+
+.siswa-jadwal-item {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+    padding     : 0.75rem;
+    border      : 2px solid #111111;
+    background  : #ffffff;
+    transition  : background 0.1s;
+}
+
+.siswa-jadwal-item:hover {
+    background : #fffde7;
+}
+
+.siswa-jadwal-jam {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    background      : #ffe845;
+    border          : 2px solid #111111;
+    padding         : 0.4rem 0.6rem;
+    font-family     : 'Archivo', sans-serif;
+    font-weight     : 900;
+    font-size       : 0.8rem;
+    color           : #111111;
+    line-height     : 1.3;
+    min-width       : 68px;
+    text-align      : center;
+    flex-shrink     : 0;
+}
+
+.siswa-jadwal-info {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+}
+
+.siswa-jadwal-mapel {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 800;
+    font-size   : 0.875rem;
+    color       : #111111;
+}
+
+.siswa-jadwal-guru {
+    font-family : 'Inter', sans-serif;
+    font-size   : 0.775rem;
+    color       : #666666;
+}
+
+/* ===========================
+   NILAI LIST
+=========================== */
+.siswa-nilai-list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.5rem;
+}
+
+.siswa-nilai-item {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+    padding     : 0.65rem;
+    border      : 2px solid #111111;
+    background  : #ffffff;
+    transition  : background 0.1s;
+}
+
+.siswa-nilai-item:hover {
+    background : #f5f5f0;
+}
+
+.siswa-nilai-kode {
+    font-family     : 'Archivo', sans-serif;
+    font-weight     : 900;
+    font-size       : 0.72rem;
+    color           : #ffffff;
+    background      : #2c46c4;
+    border          : 2px solid #111111;
+    padding         : 0.3rem 0.5rem;
+    min-width       : 44px;
+    text-align      : center;
+    text-transform  : uppercase;
+    flex-shrink     : 0;
+}
+
+.siswa-nilai-info {
+    flex : 1;
+}
+
+.siswa-nilai-mapel {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 700;
+    font-size   : 0.875rem;
+    color       : #111111;
+}
+
+.siswa-nilai-angka {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 900;
+    font-size   : 1.1rem;
+    color       : #111111;
+    flex-shrink : 0;
+}
+
+.nilai-hijau  { color: #03d930; }
+.nilai-kuning { color: #e6a800; }
+.nilai-merah  { color: #d234b0; }
+
+.siswa-nilai-predikat {
+    font-family  : 'Archivo', sans-serif;
+    font-weight  : 900;
+    font-size    : 1rem;
+    color        : #111111;
+    min-width    : 20px;
+    text-align   : center;
+    flex-shrink  : 0;
+}
+
+/* ===========================
+   PENGUMUMAN LIST
+=========================== */
+.siswa-pengumuman-list {
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.75rem;
+}
+
+.siswa-pengumuman-item {
+    display     : flex;
+    gap         : 1rem;
+    padding     : 1rem;
+    border      : 2px solid #111111;
+    background  : #ffffff;
+    transition  : background 0.1s;
+}
+
+.siswa-pengumuman-item:hover {
+    background : #fffde7;
+}
+
+.siswa-pengumuman-tgl {
+    width           : 48px;
+    height          : 48px;
+    background      : #ffe845;
+    border          : 2px solid #111111;
+    box-shadow      : 2px 2px 0px #111111;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    flex-shrink     : 0;
+    line-height     : 1;
+}
+
+.siswa-pengumuman-tgl span:first-child {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 900;
+    font-size   : 1.1rem;
+    color       : #111111;
+}
+
+.siswa-pengumuman-tgl span:last-child {
+    font-family    : 'Inter', sans-serif;
+    font-size      : 0.62rem;
+    color          : #111111;
+    text-transform : uppercase;
+    font-weight    : 600;
+}
+
+.siswa-pengumuman-isi {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    gap            : 0.2rem;
+}
+
+.siswa-pengumuman-judul {
+    font-family : 'Archivo', sans-serif;
+    font-weight : 800;
+    font-size   : 0.9rem;
+    color       : #111111;
+}
+
+.siswa-pengumuman-teks {
+    font-family : 'Inter', sans-serif;
+    font-size   : 0.825rem;
+    color       : #555555;
+    line-height : 1.5;
+}
+
+/* ===========================
+   NEO CARD HEADER
+=========================== */
+.neo-card-header {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    margin-bottom   : 1.25rem;
+    padding-bottom  : 0.75rem;
+    border-bottom   : 3px solid #111111;
+}
+
+.neo-card-header h3 {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+    font-family : 'Archivo', sans-serif;
+    font-size   : 1rem;
+    font-weight : 800;
+    color       : #111111;
+}
+
+.neo-card-header h3 i {
+    width  : 18px;
+    height : 18px;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.neo-empty {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    padding         : 2.5rem 2rem;
+    gap             : 0.75rem;
+    border          : 3px dashed #cccccc;
+    background      : #fafafa;
+}
+
+.neo-empty i {
+    width   : 48px;
+    height  : 48px;
+    opacity : 0.3;
+}
+
+.neo-empty p {
+    font-family : 'Inter', sans-serif;
+    font-weight : 600;
+    font-size   : 0.9rem;
+    color       : #999999;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .siswa-grid-2 {
+        grid-template-columns : 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .siswa-rekap-grid {
+        grid-template-columns : repeat(2, 1fr);
+    }
+
+    .siswa-profil-card {
+        flex-direction : column;
+        align-items    : flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .siswa-rekap-grid {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}

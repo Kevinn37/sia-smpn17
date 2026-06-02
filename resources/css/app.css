@@ -1,0 +1,318 @@
+/* FILE: resources/css/app.css */
+/* Base CSS global — Full Neo Brutalism */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   IMPORT FONT GOOGLE
+=========================== */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap");
+
+/* ===========================
+   BASE GLOBAL
+=========================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #111111;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ===========================
+   TIPOGRAFI
+=========================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #111111;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    color: #111111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===========================
+   KOMPONEN NEO BRUTALISM
+=========================== */
+
+/* Kartu */
+.neo-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    border-radius: 0;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.5rem;
+}
+
+/* Tombol utama */
+.neo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.4rem;
+    border: 3px solid #111111;
+    border-radius: 0;
+    box-shadow: 4px 4px 0px #111111;
+    cursor: pointer;
+    transition:
+        box-shadow 0.1s ease,
+        transform 0.1s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.neo-btn:hover {
+    box-shadow: 1px 1px 0px #111111;
+    transform: translate(3px, 3px);
+}
+
+.neo-btn:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+/* Varian tombol */
+.neo-btn-kuning {
+    background: #ffe845;
+    color: #111111;
+}
+.neo-btn-biru {
+    background: #2c46c4;
+    color: #ffffff;
+}
+.neo-btn-fuchsia {
+    background: #d234b0;
+    color: #ffffff;
+}
+.neo-btn-hijau {
+    background: #03d930;
+    color: #111111;
+}
+.neo-btn-putih {
+    background: #ffffff;
+    color: #111111;
+}
+.neo-btn-hitam {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* Tombol kecil */
+.neo-btn-sm {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.85rem;
+    box-shadow: 3px 3px 0px #111111;
+}
+
+.neo-btn-sm:hover {
+    box-shadow: 1px 1px 0px #111111;
+    transform: translate(2px, 2px);
+}
+
+/* Input form */
+.neo-input {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    border: 3px solid #111111;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    outline: none;
+    transition: box-shadow 0.1s ease;
+}
+
+.neo-input:focus {
+    box-shadow: 4px 4px 0px #2c46c4;
+}
+
+/* Select form */
+.neo-select {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    border: 3px solid #111111;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    transition: box-shadow 0.1s ease;
+}
+
+.neo-select:focus {
+    box-shadow: 4px 4px 0px #2c46c4;
+}
+
+/* Textarea */
+.neo-textarea {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.65rem 1rem;
+    border: 3px solid #111111;
+    border-radius: 0;
+    background: #ffffff;
+    color: #111111;
+    outline: none;
+    resize: vertical;
+    min-height: 100px;
+    transition: box-shadow 0.1s ease;
+}
+
+.neo-textarea:focus {
+    box-shadow: 4px 4px 0px #2c46c4;
+}
+
+/* Label form */
+.neo-label {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #111111;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+/* Badge status */
+.neo-badge {
+    display: inline-block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.65rem;
+    border: 2px solid #111111;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.neo-badge-hadir {
+    background: #03d930;
+    color: #111111;
+}
+.neo-badge-izin {
+    background: #ffe845;
+    color: #111111;
+}
+.neo-badge-sakit {
+    background: #2c46c4;
+    color: #ffffff;
+}
+.neo-badge-alfa {
+    background: #d234b0;
+    color: #ffffff;
+}
+
+/* Tabel */
+.neo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    border: 3px solid #111111;
+}
+
+.neo-table thead {
+    background: #111111;
+    color: #ffe845;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+}
+
+.neo-table thead th {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.neo-table tbody tr {
+    border-bottom: 2px solid #111111;
+    transition: background 0.1s ease;
+}
+
+.neo-table tbody tr:hover {
+    background: #ffe845;
+}
+
+.neo-table tbody td {
+    padding: 0.85rem 1rem;
+}
+
+/* Alert error form */
+.neo-alert-error {
+    background: #fff0f0;
+    border: 3px solid #d234b0;
+    box-shadow: 4px 4px 0px #d234b0;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #111111;
+}
+
+.neo-alert-sukses {
+    background: #f0fff4;
+    border: 3px solid #03d930;
+    box-shadow: 4px 4px 0px #03d930;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #111111;
+}
+
+/* ===========================
+   UTILITY
+=========================== */
+.text-heading {
+    font-family: "Archivo", sans-serif;
+}
+.text-body {
+    font-family: "Inter", sans-serif;
+}
+
+.neo-divider {
+    border: none;
+    border-top: 3px solid #111111;
+    margin: 1.5rem 0;
+}

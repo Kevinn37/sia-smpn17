@@ -1,0 +1,169 @@
+/* FILE: public/css/jadwal.css */
+/* Styling khusus halaman jadwal pelajaran */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   BADGE HARI
+=========================== */
+.jadwal-badge-senin {
+    background: #ffe845;
+    color: #111111;
+    border: 2px solid #111111;
+}
+.jadwal-badge-selasa {
+    background: #2c46c4;
+    color: #ffffff;
+    border: 2px solid #111111;
+}
+.jadwal-badge-rabu {
+    background: #03d930;
+    color: #111111;
+    border: 2px solid #111111;
+}
+.jadwal-badge-kamis {
+    background: #d234b0;
+    color: #ffffff;
+    border: 2px solid #111111;
+}
+.jadwal-badge-jumat {
+    background: #111111;
+    color: #ffe845;
+    border: 2px solid #111111;
+}
+
+/* ===========================
+   JAM PILL
+=========================== */
+.jadwal-jam {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #111111;
+    background: #f5f5f0;
+    border: 2px solid #111111;
+    padding: 0.2rem 0.6rem;
+}
+
+/* ===========================
+   JADWAL GRID VIEW (per hari)
+=========================== */
+.jadwal-hari-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.jadwal-hari-section {
+    border: 3px solid #111111;
+    box-shadow: 5px 5px 0px #111111;
+    overflow: hidden;
+}
+
+.jadwal-hari-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 3px solid #111111;
+}
+
+.jadwal-hari-header.senin {
+    background: #ffe845;
+}
+.jadwal-hari-header.selasa {
+    background: #2c46c4;
+    color: #fff;
+}
+.jadwal-hari-header.rabu {
+    background: #03d930;
+}
+.jadwal-hari-header.kamis {
+    background: #d234b0;
+    color: #fff;
+}
+.jadwal-hari-header.jumat {
+    background: #111111;
+    color: #ffe845;
+}
+
+.jadwal-hari-nama {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.jadwal-hari-body {
+    background: #ffffff;
+}
+
+.jadwal-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 2px solid #eeeeee;
+    transition: background 0.1s;
+}
+
+.jadwal-row:last-child {
+    border-bottom: none;
+}
+
+.jadwal-row:hover {
+    background: #fffde7;
+}
+
+.jadwal-row-jam {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #111111;
+    min-width: 110px;
+    flex-shrink: 0;
+}
+
+.jadwal-row-mapel {
+    flex: 1;
+    min-width: 0;
+}
+
+.jadwal-row-mapel-nama {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #111111;
+}
+
+.jadwal-row-mapel-guru {
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: #666666;
+    margin-top: 0.1rem;
+}
+
+.jadwal-row-kelas {
+    flex-shrink: 0;
+}
+
+.jadwal-row-aksi {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .jadwal-row {
+        flex-wrap: wrap;
+    }
+
+    .jadwal-row-jam {
+        min-width: unset;
+        width: 100%;
+    }
+}

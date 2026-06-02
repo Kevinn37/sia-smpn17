@@ -1,0 +1,309 @@
+/* FILE: public/css/admin-dashboard.css */
+/* Styling khusus halaman dashboard admin */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   GRID LAYOUT DASHBOARD
+=========================== */
+.dashboard-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ===========================
+   NEO CARD HEADER
+=========================== */
+.neo-card {
+    margin-bottom: 0;
+}
+
+.neo-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #111111;
+}
+
+.neo-card-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Archivo", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.neo-card-header h3 i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Tombol kecil di header card */
+.neo-btn-sm {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.75rem;
+    box-shadow: 2px 2px 0px #111111;
+}
+
+/* ===========================
+   REKAP PRESENSI
+=========================== */
+.presensi-rekap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.presensi-rekap-item {
+    border: 2px solid #111111;
+    border-radius: 4px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.presensi-rekap-angka {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1;
+}
+
+.presensi-rekap-label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    color: #555555;
+    font-weight: 500;
+}
+
+.presensi-rekap-hadir {
+    background: #03d930;
+    box-shadow: 3px 3px 0px #111111;
+}
+.presensi-rekap-izin {
+    background: #ffe845;
+    box-shadow: 3px 3px 0px #111111;
+}
+.presensi-rekap-sakit {
+    background: #2c46c4;
+    box-shadow: 3px 3px 0px #111111;
+}
+.presensi-rekap-sakit .presensi-rekap-angka,
+.presensi-rekap-sakit .presensi-rekap-label {
+    color: #ffffff;
+}
+.presensi-rekap-alfa {
+    background: #d234b0;
+    box-shadow: 3px 3px 0px #111111;
+}
+.presensi-rekap-alfa .presensi-rekap-angka,
+.presensi-rekap-alfa .presensi-rekap-label {
+    color: #ffffff;
+}
+
+/* ===========================
+   KEGIATAN MENDATANG
+=========================== */
+.kegiatan-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.kegiatan-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.kegiatan-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.kegiatan-tanggal {
+    width: 44px;
+    height: 44px;
+    background: #ffe845;
+    border: 2px solid #111111;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.kegiatan-tanggal span:first-child {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #111111;
+}
+
+.kegiatan-tanggal span:last-child {
+    font-family: "Inter", sans-serif;
+    font-size: 0.65rem;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.kegiatan-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+}
+
+.kegiatan-judul {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #111111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Badge jenis kegiatan */
+.kegiatan-badge-libur_nasional {
+    background: #d234b0;
+    color: #fff;
+}
+.kegiatan-badge-libur_sekolah {
+    background: #2c46c4;
+    color: #fff;
+}
+.kegiatan-badge-ujian {
+    background: #ffe845;
+    color: #111;
+}
+.kegiatan-badge-kegiatan {
+    background: #03d930;
+    color: #111;
+}
+
+/* ===========================
+   SISWA TERBARU (tabel)
+=========================== */
+.neo-table {
+    margin-top: 0;
+}
+
+/* ===========================
+   PENGUMUMAN LIST
+=========================== */
+.pengumuman-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pengumuman-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.pengumuman-list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pengumuman-list-icon {
+    width: 32px;
+    height: 32px;
+    background: #2c46c4;
+    border: 2px solid #111111;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pengumuman-list-icon i {
+    width: 16px;
+    height: 16px;
+    color: #ffe845;
+}
+
+.pengumuman-list-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.pengumuman-list-judul {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #111111;
+    line-height: 1.4;
+}
+
+.pengumuman-list-tanggal {
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    color: #777777;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+.neo-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 0.5rem;
+    color: #999999;
+}
+
+.neo-empty i {
+    width: 36px;
+    height: 36px;
+}
+
+.neo-empty p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #999999;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .dashboard-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .presensi-rekap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .presensi-rekap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

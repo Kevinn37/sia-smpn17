@@ -1,0 +1,172 @@
+/* FILE: public/css/guru-dashboard.css */
+/* Styling dashboard guru */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   SAMBUTAN
+=========================== */
+.guru-sambutan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c46c4;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.guru-sambutan-teks h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ffe845;
+    margin-bottom: 0.25rem;
+}
+
+.guru-sambutan-teks p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.guru-sesi-aktif-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #03d930;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    padding: 0.5rem 1rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #111111;
+    animation: pulse-badge 2s infinite;
+}
+
+.guru-sesi-aktif-badge i {
+    width: 16px;
+    height: 16px;
+}
+
+@keyframes pulse-badge {
+    0%,
+    100% {
+        box-shadow: 3px 3px 0px #111111;
+    }
+    50% {
+        box-shadow: 5px 5px 0px #111111;
+    }
+}
+
+/* ===========================
+   JADWAL LIST
+=========================== */
+.guru-jadwal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.guru-jadwal-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 3px solid #111111;
+    box-shadow: 4px 4px 0px #111111;
+    background: #ffffff;
+    transition:
+        transform 0.1s,
+        box-shadow 0.1s;
+    flex-wrap: wrap;
+}
+
+.guru-jadwal-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.guru-jadwal-jam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffe845;
+    border: 3px solid #111111;
+    padding: 0.5rem 0.85rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: #111111;
+    line-height: 1.2;
+    min-width: 75px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.guru-jadwal-jam-sep {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.guru-jadwal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+.guru-jadwal-mapel {
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: #111111;
+}
+
+.guru-jadwal-kelas {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #555555;
+}
+
+.guru-jadwal-kelas i {
+    width: 14px;
+    height: 14px;
+}
+
+.guru-jadwal-aksi {
+    flex-shrink: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .guru-sambutan {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .guru-jadwal-item {
+        flex-wrap: wrap;
+    }
+
+    .guru-jadwal-aksi {
+        width: 100%;
+    }
+
+    .guru-jadwal-aksi .neo-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

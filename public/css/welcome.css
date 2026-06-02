@@ -1,0 +1,751 @@
+/* FILE: public/css/landing.css */
+/* Styling halaman landing page — Full Neo Brutalism */
+/* SIAKAD SMP Negeri 17 Makassar */
+
+/* ===========================
+   NAVIGASI
+=========================== */
+.nav-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #ffe845;
+    border-bottom: 4px solid #111111;
+}
+
+.nav-isi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.nav-brand-teks {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.nav-brand-sistem {
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #111111;
+}
+
+.nav-brand-sekolah {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    color: #111111;
+    opacity: 0.7;
+}
+
+/* ===========================
+   SECTION UMUM
+=========================== */
+.section-isi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.section-isi-tengah {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-label {
+    display: inline-block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    background: #ffe845;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    padding: 0.3rem 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.section-judul {
+    font-family: "Archivo", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #111111;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero-wrapper {
+    background: #ffffff;
+    border-bottom: 4px solid #111111;
+    overflow: hidden;
+}
+
+.hero-wrapper .section-isi {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-teks {
+    flex: 1;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: #03d930;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-badge i {
+    width: 14px;
+    height: 14px;
+}
+
+.hero-judul {
+    font-family: "Archivo", sans-serif;
+    font-size: 3.25rem;
+    font-weight: 900;
+    color: #111111;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+}
+
+.hero-judul-aksen {
+    background: #ffe845;
+    border-bottom: 4px solid #111111;
+    padding: 0 0.25rem;
+}
+
+.hero-deskripsi {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+
+.hero-aksi {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Gambar hero */
+.hero-gambar {
+    flex: 1;
+    position: relative;
+}
+
+.hero-gambar-box {
+    background: #f0f0f0;
+    border: 4px solid #111111;
+    box-shadow: 8px 8px 0px #111111;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-gambar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Kartu stat mengambang */
+.hero-stat-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: #ffe845;
+    border: 3px solid #111111;
+    box-shadow: 5px 5px 0px #111111;
+    padding: 0.75rem 1rem;
+}
+
+.hero-stat-card i {
+    width: 22px;
+    height: 22px;
+    color: #111111;
+}
+
+.hero-stat-angka {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #111111;
+    line-height: 1;
+}
+
+.hero-stat-label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    color: #111111;
+}
+
+.hero-stat-1 {
+    bottom: -1rem;
+    left: -1rem;
+}
+
+.hero-stat-2 {
+    top: -1rem;
+    right: -1rem;
+}
+
+/* ===========================
+   TENTANG SEKOLAH
+=========================== */
+.tentang-wrapper {
+    background: #f5f5f0;
+    border-bottom: 4px solid #111111;
+}
+
+.tentang-gambar {
+    flex: 1;
+}
+
+.tentang-gambar-box {
+    background: #e0e0e0;
+    border: 4px solid #111111;
+    box-shadow: 8px 8px 0px #2c46c4;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.tentang-gambar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tentang-teks {
+    flex: 1;
+}
+
+.tentang-teks .section-label {
+    margin-bottom: 0.5rem;
+}
+
+.tentang-teks .section-judul {
+    margin-bottom: 1rem;
+}
+
+.tentang-deskripsi {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.tentang-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.tentang-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #111111;
+}
+
+.tentang-info-item i {
+    width: 30px;
+    height: 30px;
+    background: #ffe845;
+    border: 3px solid #111111;
+    box-shadow: 2px 2px 0px #111111;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   VISI & MISI
+=========================== */
+.visimisi-wrapper {
+    background: #2c46c4;
+    border-bottom: 4px solid #111111;
+}
+
+.visimisi-wrapper .section-label {
+    background: #ffe845;
+}
+
+.visimisi-wrapper .section-judul {
+    color: #ffffff;
+}
+
+.visimisi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.visimisi-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    padding: 2rem;
+    text-align: left;
+}
+
+.visimisi-visi {
+    box-shadow: 8px 8px 0px #ffe845;
+}
+
+.visimisi-misi {
+    box-shadow: 8px 8px 0px #03d930;
+}
+
+.visimisi-card-icon {
+    width: 52px;
+    height: 52px;
+    background: #ffe845;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.visimisi-card-icon i {
+    width: 26px;
+    height: 26px;
+}
+
+.visimisi-card h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #111111;
+    margin-bottom: 0.75rem;
+    border-bottom: 3px solid #111111;
+    padding-bottom: 0.5rem;
+}
+
+.visimisi-card p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333333;
+    line-height: 1.8;
+}
+
+.visimisi-misi-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.visimisi-misi-list li {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #333333;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.visimisi-misi-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #2c46c4;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+/* ===========================
+   FITUR SISTEM
+=========================== */
+.fitur-wrapper {
+    background: #ffffff;
+    border-bottom: 4px solid #111111;
+}
+
+.fitur-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.fitur-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.5rem;
+    text-align: left;
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
+}
+
+.fitur-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.fitur-card-icon {
+    width: 52px;
+    height: 52px;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.fitur-card-icon i {
+    width: 26px;
+    height: 26px;
+}
+
+.fitur-icon-kuning {
+    background: #ffe845;
+}
+.fitur-icon-biru {
+    background: #2c46c4;
+    color: #fff;
+}
+.fitur-icon-fuchsia {
+    background: #d234b0;
+    color: #fff;
+}
+.fitur-icon-hijau {
+    background: #03d930;
+}
+
+.fitur-card h3 {
+    font-family: "Archivo", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #111111;
+    padding-bottom: 0.4rem;
+}
+
+.fitur-card p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #444444;
+    line-height: 1.7;
+}
+
+/* ===========================
+   PENGUMUMAN
+=========================== */
+.pengumuman-wrapper {
+    background: #f5f5f0;
+    border-bottom: 4px solid #111111;
+}
+
+.pengumuman-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.pengumuman-card {
+    background: #ffffff;
+    border: 3px solid #111111;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 1.25rem;
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease;
+}
+
+.pengumuman-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #111111;
+}
+
+.pengumuman-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #111111;
+}
+
+.pengumuman-card-header i {
+    width: 16px;
+    height: 16px;
+    color: #2c46c4;
+}
+
+.pengumuman-tanggal {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pengumuman-judul {
+    font-family: "Archivo", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.pengumuman-isi {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #555555;
+    line-height: 1.7;
+}
+
+/* ===========================
+   LOKASI
+=========================== */
+.lokasi-wrapper {
+    background: #ffffff;
+    border-bottom: 4px solid #111111;
+}
+
+.lokasi-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    width: 100%;
+    text-align: left;
+}
+
+.lokasi-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.lokasi-info-item {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.lokasi-info-icon {
+    width: 44px;
+    height: 44px;
+    background: #ffe845;
+    border: 3px solid #111111;
+    box-shadow: 3px 3px 0px #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.lokasi-info-icon i {
+    width: 22px;
+    height: 22px;
+}
+
+.lokasi-info-item strong {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: #111111;
+    margin-bottom: 0.25rem;
+}
+
+.lokasi-info-item p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.lokasi-maps {
+    border: 4px solid #111111;
+    box-shadow: 8px 8px 0px #111111;
+    overflow: hidden;
+}
+
+.lokasi-maps iframe {
+    display: block;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer-wrapper {
+    background: #111111;
+    border-top: 4px solid #ffe845;
+    padding: 2rem 1.5rem;
+}
+
+.footer-isi {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border: 3px solid #ffe845;
+    box-shadow: 3px 3px 0px #ffe845;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.footer-brand-sistem {
+    display: block;
+    font-family: "Archivo", sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: #ffe845;
+    line-height: 1;
+}
+
+.footer-brand-sekolah {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    color: #aaaaaa;
+}
+
+.footer-copy {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #777777;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1024px) {
+    .fitur-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-isi {
+        flex-direction: column;
+        padding: 3rem 1.25rem;
+    }
+
+    .hero-judul {
+        font-size: 2.25rem;
+    }
+
+    .visimisi-grid,
+    .fitur-grid,
+    .pengumuman-grid,
+    .lokasi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tentang-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stat-1,
+    .hero-stat-2 {
+        display: none;
+    }
+
+    .footer-isi {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-judul {
+        font-size: 1.9rem;
+    }
+
+    .hero-aksi {
+        flex-direction: column;
+    }
+
+    .hero-aksi .neo-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
