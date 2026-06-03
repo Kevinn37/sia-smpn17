@@ -10,9 +10,15 @@
         { "src": "/js/(.*)", "dest": "/public/js/$1" },
         { "src": "/img/(.*)", "dest": "/public/img/$1" },
         { "src": "/fonts/(.*)", "dest": "/public/fonts/$1" },
-        { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-        { "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot))", "dest": "/public/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
+    ],
+    "headers": [
+        {
+            "source": "/img/(.*)",
+            "headers": [
+                { "key": "Content-Type", "value": "image/png" }
+            ]
+        }
     ],
     "public": true,
     "buildCommand": "vite build",
