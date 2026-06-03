@@ -38,7 +38,11 @@
     <div class="siswa-profil-card" data-aos="fade-right">
         <div class="siswa-profil-foto">
             @if ($siswa->foto)
-                <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}">
+                @if (str_starts_with($siswa->foto, 'http'))
+                    <img src="{{ $siswa->foto }}" alt="{{ $siswa->nama }}">
+                @else
+                    <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}">
+                @endif
             @else
                 <div class="siswa-profil-inisial">
                     {{ strtoupper(substr($siswa->nama, 0, 1)) }}
@@ -137,30 +141,22 @@
             @if ($daftarNilai->count() > 0)
                 <div class="siswa-nilai-list">
                     @foreach ($daftarNilai as $nilai)
-                        @php
-                            $na = $nilai->nilai_akhir;
-                            $predikat = $na
-                                ? ($na >= 90
-                                    ? 'A'
-                                    : ($na >= 80
-                                        ? 'B'
-                                        : ($na >= 70
-                                            ? 'C'
-                                            : ($na >= 60
-                                                ? 'D'
-                                                : 'E'))))
-                                : '-';
-                        @endphp
                         <div class="siswa-nilai-item">
                             <div class="siswa-nilai-kode">{{ $nilai->kode_mapel }}</div>
                             <div class="siswa-nilai-info">
                                 <span class="siswa-nilai-mapel">{{ $nilai->nama_mapel }}</span>
                             </div>
-                            <div
-                                class="siswa-nilai-angka {{ $na ? ($na >= 80 ? 'nilai-hijau' : ($na >= 70 ? 'nilai-kuning' : 'nilai-merah')) : '' }}">
-                                {{ $na ?? '—' }}
+                            <div class="siswa-nilai-angka {{ $nilai->nilai_akhir ? ($nilai->nilai_akhir >= 80 ? 'nilai-hijau' : ($nilai->nilai_akhir >= 70 ? 'nilai-kuning' : 'nilai-merah')) : '' }}">
+                                {{ $nilai->nilai_akhir ?? '—' }}
                             </div>
-                            <div class="siswa-nilai-predikat">{{ $predikat }}</div>
+                            <div class="siswa-nilai-predikat">
+                                {{ $nilai->nilai_akhir
+                                    ? ($nilai->nilai_akhir >= 90 ? 'A'
+                                        : ($nilai->nilai_akhir >= 80 ? 'B'
+                                            : ($nilai->nilai_akhir >= 70 ? 'C'
+                                                : ($nilai->nilai_akhir >= 60 ? 'D' : 'E'))))
+                                    : '-' }}
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -193,10 +189,6 @@
                         <div class="siswa-pengumuman-isi">
                             <span class="siswa-pengumuman-judul">{{ $pengumuman->judul }}</span>
                             <span class="siswa-pengumuman-teks">{{ Str::limit($pengumuman->isi, 100) }}</span>
-                            <span class="sidebar-nav-label">Akun</span>
-                            <a href="{{ route('guru.profil') }}">
-                                <i data-lucide="user"></i> Profil Saya
-                            </a>
                         </div>
                     </div>
                 @endforeach
