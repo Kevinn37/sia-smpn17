@@ -47,7 +47,11 @@
         <div class="profil-kartu" data-aos="fade-right">
             <div class="profil-foto-wrapper">
                 @if ($guru->foto)
-                    <img src="{{ asset('img/guru/' . $guru->foto) }}" alt="{{ $guru->nama }}" class="profil-foto">
+                    @if (str_starts_with($guru->foto, 'http'))
+                        <img src="{{ $guru->foto }}" alt="{{ $guru->nama }}" class="profil-foto">
+                    @else
+                        <img src="{{ asset('img/guru/' . $guru->foto) }}" alt="{{ $guru->nama }}" class="profil-foto">
+                    @endif
                 @else
                     <div class="profil-foto-inisial">
                         {{ strtoupper(substr($guru->nama, 0, 1)) }}
@@ -81,7 +85,7 @@
 
             @if (session('sukses'))
                 <div class="neo-alert-sukses" style="margin-bottom:1rem;">
-                    ✅ {{ session('sukses') }}
+                     {{ session('sukses') }}
                 </div>
             @endif
 
@@ -89,7 +93,7 @@
                 <div class="neo-alert-error" style="margin-bottom:1rem;">
                     <ul style="list-style:none;">
                         @foreach ($errors->all() as $error)
-                            <li>⚠ {{ $error }}</li>
+                            <li> {{ $error }}</li>
                         @endforeach
                     </ul>
                 </div>

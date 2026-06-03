@@ -9,6 +9,7 @@ namespace App\Http\Controllers\Guru;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class ProfilController extends Controller
 {
@@ -40,22 +41,26 @@ class ProfilController extends Controller
 
         if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
             try {
-                // Pastikan folder ada
-                $folderTujuan = public_path('img/guru');
-                if (!file_exists($folderTujuan)) {
-                    mkdir($folderTujuan, 0755, true);
-                }
+                $file = $request->file('foto');
+                $namaFile = 'guru_' . session('id_user') . '_' . time() . '.' . $file->extension();
 
-                // Hapus foto lama
-                if ($namaFoto && file_exists($folderTujuan . '/' . $namaFoto)) {
-                    unlink($folderTujuan . '/' . $namaFoto);
-                }
+                $token = env('BLOB_READ_WRITE_TOKEN');
 
-                // Simpan foto baru
-                $namaFoto = 'guru_' . session('id_user') . '_' . time() . '.' . $request->file('foto')->extension();
-                $request->file('foto')->move($folderTujuan, $namaFoto);
+                // Upload ke Vercel Blob lewat HTTP API
+                $response = Http::withHeaders([
+                    'Authorization' => 'Bearer ' . $token,
+                    'Content-Type'  => $file->getMimeType(),
+                    'x-content-type' => $file->getMimeType(),
+                ])->withBody(
+                    file_get_contents($file->getRealPath()),
+                    $file->getMimeType()
+                )->put('https://blob.vercel-storage.com/' . $namaFile);
+
+                if ($response->successful()) {
+                    $namaFoto = $response->json('url');
+                }
             } catch (\Exception $e) {
-                // Vercel read-only filesystem — skip upload foto
+                // Skip jika gagal
             }
         }
 

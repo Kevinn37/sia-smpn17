@@ -15,9 +15,7 @@
     "headers": [
         {
             "source": "/img/(.*)",
-            "headers": [
-                { "key": "Content-Type", "value": "image/png" }
-            ]
+            "headers": [{ "key": "Content-Type", "value": "image/png" }]
         }
     ],
     "public": true,
@@ -25,7 +23,7 @@
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "https://sia-smpn17.vercel.app",
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -42,6 +40,7 @@
         "DB_PORT": "56523",
         "DB_DATABASE": "railway",
         "DB_USERNAME": "root",
-        "DB_PASSWORD": "JUBaQDgaQEVewNDPsgGmSHojrToITpYt"
+        "DB_PASSWORD": "JUBaQDgaQEVewNDPsgGmSHojrToITpYt",
+        "BLOB_READ_WRITE_TOKEN": "vercel_blob_rw_PZbEt5C3fkxvp1BB_jNrgW16ej5GNRyDpEhVLhzGiA27KP8"
     }
 }
