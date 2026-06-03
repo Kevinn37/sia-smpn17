@@ -62,11 +62,13 @@
                         $id_user     = session('id_user');
 
                         if ($role === 'guru') {
-                            $dataGuru    = DB::table('guru')->where('id_user', $id_user)->first();
-                            $fotoSidebar = $dataGuru?->foto ? asset('img/guru/' . $dataGuru->foto) : null;
+                            $dataGuru = DB::table('guru')->where('id_user', $id_user)->first();
+                            $foto     = $dataGuru?->foto;
+                            $fotoSidebar = $foto ? (str_starts_with($foto, 'http') ? $foto : asset('img/guru/' . $foto)) : null;
                         } elseif ($role === 'siswa') {
-                            $dataSiswa   = DB::table('siswa')->where('id_user', $id_user)->first();
-                            $fotoSidebar = $dataSiswa?->foto ? asset('img/siswa/' . $dataSiswa->foto) : null;
+                            $dataSiswa = DB::table('siswa')->where('id_user', $id_user)->first();
+                            $foto      = $dataSiswa?->foto;
+                            $fotoSidebar = $foto ? (str_starts_with($foto, 'http') ? $foto : asset('img/siswa/' . $foto)) : null;
                         }
                     @endphp
 
