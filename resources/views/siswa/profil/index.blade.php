@@ -46,13 +46,17 @@
         {{-- Kartu profil kiri --}}
         <div class="profil-kartu" data-aos="fade-right">
             <div class="profil-foto-wrapper">
-                @if ($siswa->foto)
-                    <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}" class="profil-foto">
-                @else
-                    <div class="profil-foto-inisial">
-                        {{ strtoupper(substr($siswa->nama, 0, 1)) }}
-                    </div>
-                @endif
+    @if ($siswa->foto)
+    @if (str_starts_with($siswa->foto, 'http'))
+        <img src="{{ $siswa->foto }}" alt="{{ $siswa->nama }}" class="profil-foto">
+    @else
+        <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}" class="profil-foto">
+    @endif
+@else
+    <div class="profil-foto-inisial">
+        {{ strtoupper(substr($siswa->nama, 0, 1)) }}
+    </div>
+@endif
             </div>
             <h3 class="profil-nama">{{ $siswa->nama }}</h3>
             <span class="profil-role">Siswa</span>

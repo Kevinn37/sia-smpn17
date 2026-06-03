@@ -9,6 +9,7 @@ namespace App\Http\Controllers\Siswa;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class ProfilController extends Controller
 {
@@ -38,21 +39,25 @@ class ProfilController extends Controller
         $namaFoto = $siswa->foto;
 
         if ($request->hasFile('foto') && $request->file('foto')->isValid()) {
+            try {
+                $file    = $request->file('foto');
+                $token   = env('BLOB_READ_WRITE_TOKEN');
+                $namaFile = 'siswa_' . session('id_user') . '_' . time() . '.' . $file->extension();
 
-            // Pastikan folder ada
-            $folderTujuan = public_path('img/siswa');
-            if (!file_exists($folderTujuan)) {
-                mkdir($folderTujuan, 0755, true);
+                $response = Http::withHeaders([
+                    'Authorization' => 'Bearer ' . $token,
+                    'Content-Type'  => $file->getMimeType(),
+                ])->withBody(
+                    file_get_contents($file->getRealPath()),
+                    $file->getMimeType()
+                )->put('https://blob.vercel-storage.com/' . $namaFile);
+
+                if ($response->successful()) {
+                    $namaFoto = $response->json('url');
+                }
+            } catch (\Exception $e) {
+                // Skip jika gagal
             }
-
-            // Hapus foto lama
-            if ($namaFoto && file_exists($folderTujuan . '/' . $namaFoto)) {
-                unlink($folderTujuan . '/' . $namaFoto);
-            }
-
-            // Simpan foto baru
-            $namaFoto = 'siswa_' . session('id_user') . '_' . time() . '.' . $request->file('foto')->extension();
-            $request->file('foto')->move($folderTujuan, $namaFoto);
         }
 
         DB::table('siswa')->where('id_siswa', $siswa->id_siswa)->update([
