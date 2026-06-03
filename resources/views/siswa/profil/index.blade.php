@@ -46,17 +46,17 @@
         {{-- Kartu profil kiri --}}
         <div class="profil-kartu" data-aos="fade-right">
             <div class="profil-foto-wrapper">
-    @if ($siswa->foto)
-    @if (str_starts_with($siswa->foto, 'http'))
-        <img src="{{ $siswa->foto }}" alt="{{ $siswa->nama }}" class="profil-foto">
-    @else
-        <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}" class="profil-foto">
-    @endif
-@else
-    <div class="profil-foto-inisial">
-        {{ strtoupper(substr($siswa->nama, 0, 1)) }}
-    </div>
-@endif
+                @if ($siswa->foto)
+                    @if (str_starts_with($siswa->foto, 'http'))
+                        <img src="{{ $siswa->foto }}" alt="{{ $siswa->nama }}" class="profil-foto">
+                    @else
+                        <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}" class="profil-foto">
+                    @endif
+                @else
+                    <div class="profil-foto-inisial">
+                        {{ strtoupper(substr($siswa->nama, 0, 1)) }}
+                    </div>
+                @endif
             </div>
             <h3 class="profil-nama">{{ $siswa->nama }}</h3>
             <span class="profil-role">Siswa</span>
@@ -112,7 +112,8 @@
                     <label class="neo-label" for="foto">
                         Upload Foto Baru <span class="form-opsional">(opsional)</span>
                     </label>
-                    <input type="file" id="foto" name="foto" class="neo-input-file" accept="image/jpg,image/jpeg,image/png">
+                    <input type="file" id="foto" name="foto" class="neo-input-file"
+                        accept="image/jpg,image/jpeg,image/png">
                     <span class="form-hint">Format: JPG, JPEG, PNG. Maks: 2MB</span>
                 </div>
 
@@ -126,12 +127,14 @@
                     <label class="neo-label" for="password">
                         Password Baru <span class="form-opsional">(kosongkan jika tidak ingin ganti)</span>
                     </label>
-                    <input type="password" id="password" name="password" class="neo-input" placeholder="Minimal 6 karakter">
+                    <input type="password" id="password" name="password" class="neo-input"
+                        placeholder="Minimal 6 karakter">
                 </div>
 
                 <div class="form-field" style="margin-bottom:1.5rem;">
                     <label class="neo-label" for="password_confirmation">Konfirmasi Password Baru</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" class="neo-input" placeholder="Ulangi password baru">
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="neo-input"
+                        placeholder="Ulangi password baru">
                 </div>
 
                 <div class="profil-aksi">

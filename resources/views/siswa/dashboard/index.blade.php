@@ -22,6 +22,10 @@
     <a href="{{ route('siswa.jadwal') }}">
         <i data-lucide="calendar-days"></i> Jadwal
     </a>
+    <span class="sidebar-nav-label">Akun</span>
+    <a href="{{ route('siswa.profil') }}">
+        <i data-lucide="user"></i> Profil Saya
+    </a>
 @endsection
 
 @push('css')
