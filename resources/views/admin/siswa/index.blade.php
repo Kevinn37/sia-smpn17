@@ -131,7 +131,11 @@
                                 <td>
                                     <div class="tabel-foto">
                                         @if ($siswa->foto)
-                                            <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}">
+                                            @if (str_starts_with($siswa->foto, 'http'))
+                                                <img src="{{ $siswa->foto }}" alt="{{ $siswa->nama }}">
+                                            @else
+                                                <img src="{{ asset('img/siswa/' . $siswa->foto) }}" alt="{{ $siswa->nama }}">
+                                            @endif
                                         @else
                                             <div class="tabel-foto-inisial">
                                                 {{ strtoupper(substr($siswa->nama, 0, 1)) }}
@@ -147,8 +151,7 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <span
-                                        class="neo-badge {{ $siswa->jenis_kelamin == 'L' ? 'neo-badge-sakit' : 'neo-badge-fuchsia' }}">
+                                    <span class="neo-badge {{ $siswa->jenis_kelamin == 'L' ? 'neo-badge-sakit' : 'neo-badge-fuchsia' }}">
                                         {{ $siswa->jenis_kelamin == 'L' ? 'L' : 'P' }}
                                     </span>
                                 </td>
